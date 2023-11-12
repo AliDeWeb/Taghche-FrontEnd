@@ -1,0 +1,1513 @@
+@import url("./reset.css");
+@import url("./fonts.css");
+
+/* 
+======================
+  ******************
+    Default Values
+  ******************
+======================
+*/
+
+/* 
+*************
+  Variables
+*************
+*/
+:root {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+
+  --primary-color: #00a2a4;
+
+  --site-bg-color: #fcfcfa;
+  --search-input-information-bg-color: #f5f5f5;
+  --header-bg-color: #fff;
+  --tags-bg-color: #f1f1ec;
+
+  --primary-text-color: #212121;
+  --secondary-text-color: #666;
+
+  --primary-border-radius: 4rem;
+  --secondary-border-radius: 1.4rem;
+
+  --primary-transition: all 200ms ease-in-out 20ms;
+}
+
+:root * {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 1vw;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #c7c7c7;
+  border-radius: var(--secondary-border-radius);
+  -webkit-border-radius: var(--secondary-border-radius);
+  -moz-border-radius: var(--secondary-border-radius);
+  -ms-border-radius: var(--secondary-border-radius);
+  -o-border-radius: var(--secondary-border-radius);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #00a1a45b;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: #00a2a4;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Dana";
+  font-size: 1.6rem;
+  line-height: 2rem;
+  background-color: var(--site-bg-color);
+}
+
+::selection {
+  color: #fff;
+  background-color: var(--primary-color);
+}
+
+a,
+img,
+i {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  user-select: none;
+}
+
+/* 
+======================
+  ******************
+    Helper Classes
+  ******************
+======================
+*/
+
+.di-nn {
+  display: none !important;
+}
+
+.d-fl {
+  display: flex !important;
+}
+
+.d-bl {
+  display: block !important;
+}
+
+.d-nn {
+  display: none !important;
+}
+
+.dark-bg {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #00000099;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+}
+
+.set-r-0 {
+  right: 0 !important;
+}
+
+.mb-4 {
+  margin-bottom: 4rem;
+}
+
+.height-mc {
+  height: max-content !important;
+}
+
+.rot-90deg {
+  transform: rotate(90deg) !important;
+  -webkit-transform: rotate(90deg) !important;
+  -moz-transform: rotate(90deg) !important;
+  -ms-transform: rotate(90deg) !important;
+  -o-transform: rotate(90deg) !important;
+}
+
+/* 
+==============
+  **********
+    Header
+  **********
+==============
+*/
+
+.header {
+  width: 100%;
+  background-color: var(--header-bg-color);
+  box-shadow: 0 0 1rem rgb(180, 180, 180);
+}
+
+/* 
+******************
+  Header Desktop
+******************
+*/
+
+.header__desktop {
+  display: block;
+}
+
+/* Header Top Section */
+
+.header__top-section {
+  padding: 2rem 0;
+}
+
+.header__top-section-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__top-section-logo-link {
+  width: 12rem;
+  height: 3.6rem;
+}
+
+.header__top-section-logo-img {
+  width: 100%;
+  height: 100%;
+}
+
+.header__top-section-search-input-wrapper {
+  background-color: var(--search-input-information-bg-color);
+  display: flex;
+  align-items: center;
+  width: 75%;
+  height: 4.8rem;
+  padding: 0.2rem;
+  border-radius: var(--primary-border-radius);
+  -webkit-border-radius: var(--primary-border-radius);
+  -moz-border-radius: var(--primary-border-radius);
+  -ms-border-radius: var(--primary-border-radius);
+  -o-border-radius: var(--primary-border-radius);
+}
+
+.header__top-section-search-icon {
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-right: 4rem;
+  margin-left: 1.5rem;
+}
+
+.header__top-section-search-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.header__top-section-search-input {
+  font-family: "Dana-Bold";
+  width: 100%;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  margin-left: 4rem;
+}
+
+.header__top-section-user-basket-link {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+.header__top-section-user-basket-icon,
+.header__top-section-user-basket-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.header__top-section-login-link {
+  font-size: 1.2rem;
+  color: #000;
+}
+
+/* Header Nav Section */
+
+.header__bottom-section {
+  padding: 2rem 0;
+}
+
+.header__bottom-section > .container {
+  position: relative;
+}
+
+.header__bottom-section-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__bottom-section-menu-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.header__bottom-section-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.header__bottom-section-menu-icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.header__bottom-section-menu-name {
+  color: var(--primary-text-color);
+  transition: var(--primary-transition);
+  -webkit-transition: var(--primary-transition);
+  -moz-transition: var(--primary-transition);
+  -ms-transition: var(--primary-transition);
+  -o-transition: var(--primary-transition);
+}
+
+.header__bottom-section-menu-name:hover {
+  color: #000;
+}
+
+.header__bottom-section-link {
+  color: #fff;
+  background-color: var(--primary-color);
+  padding: 1.8rem 1.6rem;
+  border-radius: var(--primary-border-radius);
+  -webkit-border-radius: var(--primary-border-radius);
+  -moz-border-radius: var(--primary-border-radius);
+  -ms-border-radius: var(--primary-border-radius);
+  -o-border-radius: var(--primary-border-radius);
+}
+
+/* Header Grouping Section */
+
+.header__bottom-section-grouping-menu-wrapper {
+  position: absolute;
+  z-index: 999;
+  top: 7.6rem;
+  left: 0;
+  right: 0;
+  display: none;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #fff;
+  height: 58rem;
+}
+
+.header__bottom-section-grouping-menu-titles-wrapper {
+  width: 25.8rem;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow: auto;
+}
+
+.header__bottom-section-grouping-menu-titles-wrapper::-webkit-scrollbar {
+  width: 1vw;
+}
+
+.header__bottom-section-grouping-menu-titles-wrapper::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+.header__bottom-section-grouping-menu-titles-wrapper::-webkit-scrollbar-thumb {
+  background-color: #dddddd;
+  border-radius: var(--secondary-border-radius);
+  -webkit-border-radius: var(--secondary-border-radius);
+  -moz-border-radius: var(--secondary-border-radius);
+  -ms-border-radius: var(--secondary-border-radius);
+  -o-border-radius: var(--secondary-border-radius);
+}
+
+.header__bottom-section-grouping-menu-title-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.8rem;
+  transition: var(--primary-transition);
+  -webkit-transition: var(--primary-transition);
+  -moz-transition: var(--primary-transition);
+  -ms-transition: var(--primary-transition);
+  -o-transition: var(--primary-transition);
+}
+
+.header__bottom-section-grouping-menu-title-wrapper:hover {
+  background-color: var(--search-input-information-bg-color);
+}
+
+.header__bottom-section-grouping-menu-title-img-name-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header__bottom-section-grouping-menu-title-img {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.header__bottom-section-grouping-menu-title-name {
+  font-size: 1.4rem;
+  color: var(--primary-text-color);
+  cursor: pointer;
+}
+
+.header__bottom-section-grouping-menu-title-icon {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+.header__bottom-section-grouping-menu-title-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.header__bottom-section-grouping-menu-contents-wrapper {
+  width: calc(100% - 25.8rem);
+  display: flex;
+  flex-direction: column;
+  background-color: var(--site-bg-color);
+  border: 1px solid #f1f1ec;
+  height: 100%;
+  padding: 2rem;
+}
+
+.header__bottom-section-grouping-menu-content-title {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.header__bottom-section-grouping-menu-content-title a {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  font-family: "Dana-Bold";
+}
+
+.header__bottom-section-grouping-menu-content-title-icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.header__bottom-section-grouping-menu-content-title-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.header__bottom-section-grouping-menu-content-group-wrapper {
+  margin-top: 8rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+
+.header__bottom-section-grouping-menu-content-group-item {
+  width: 45%;
+}
+
+.header__bottom-section-grouping-menu-content-group-item a {
+  font-size: 1.4rem;
+  color: var(--primary-text-color);
+  transition: var(--primary-transition);
+  -webkit-transition: var(--primary-transition);
+  -moz-transition: var(--primary-transition);
+  -ms-transition: var(--primary-transition);
+  -o-transition: var(--primary-transition);
+}
+
+.header__bottom-section-grouping-menu-content-group-item a:hover {
+  color: var(--primary-color);
+}
+
+/* 
+*****************
+  Header Mobile
+*****************
+*/
+
+.header__mobile {
+  display: none;
+  position: relative;
+}
+
+.header__mobile-section-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+
+.header__mobile-section-top-menu-icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.header__mobile-section-top-menu-site-logo {
+  height: 3.6rem;
+}
+
+.header__mobile-section-top-user-basket-icon {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+.header__mobile-section-top-user-basket-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.header__mobile-section-bottom {
+  padding: 2rem 0;
+}
+
+.header__mobile-section-bottom-search-input-wrapper {
+  background-color: var(--search-input-information-bg-color);
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 4rem;
+  padding: 0.2rem;
+  border-radius: var(--primary-border-radius);
+  -webkit-border-radius: var(--primary-border-radius);
+  -moz-border-radius: var(--primary-border-radius);
+  -ms-border-radius: var(--primary-border-radius);
+  -o-border-radius: var(--primary-border-radius);
+}
+
+.header__mobile-section-bottom-search-icon {
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-right: 4rem;
+  margin-left: 1.5rem;
+}
+
+.header__mobile-section-bottom-search-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.header__mobile-section-bottom-search-input {
+  font-family: "Dana-Bold";
+  width: 100%;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  margin-left: 4rem;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+/* Header hamburger Menu */
+
+.header__mobile-hamburger-menu {
+  z-index: 999;
+  background-color: #fff;
+  width: 30rem;
+  height: 100vh;
+  padding: 0 2rem;
+  position: absolute;
+  top: 0;
+  right: -30rem;
+  overflow: auto;
+  transition: var(--primary-transition);
+  -webkit-transition: var(--primary-transition);
+  -moz-transition: var(--primary-transition);
+  -ms-transition: var(--primary-transition);
+  -o-transition: var(--primary-transition);
+}
+
+.header__mobile-hamburger-menu-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+
+.header__mobile-hamburger-menu-head-logo-icon-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.header__mobile-hamburger-menu-close-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+}
+
+.header__mobile-hamburger-menu-close-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.header__mobile-hamburger-menu-head-site-logo {
+  width: 9rem;
+}
+
+.header__mobile-hamburger-menu-head-link {
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: var(--primary-color);
+  padding: 1rem 1.6rem;
+  border-radius: var(--primary-border-radius);
+  -webkit-border-radius: var(--primary-border-radius);
+  -moz-border-radius: var(--primary-border-radius);
+  -ms-border-radius: var(--primary-border-radius);
+  -o-border-radius: var(--primary-border-radius);
+}
+
+.header__mobile-hamburger-menu-login-section,
+.header__mobile-hamburger-menu-products-item,
+.header__mobile-hamburger-menu-user-info-item,
+.header__mobile-hamburger-menu-site-info-item {
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.header__mobile-hamburger-menu-login-icon,
+.header__mobile-hamburger-menu-products-icon,
+.header__mobile-hamburger-menu-user-info-icon,
+.header__mobile-hamburger-menu-site-info-icon {
+  height: 2rem;
+  width: 2rem;
+}
+
+.header__mobile-hamburger-menu-login-link,
+.header__mobile-hamburger-menu-products-link,
+.header__mobile-hamburger-menu-user-info-link,
+.header__mobile-hamburger-menu-site-info-link {
+  font-size: 1.4rem;
+  color: var(--primary-text-color);
+}
+
+.header__mobile-hamburger-menu-products-item,
+.header__mobile-hamburger-menu-user-info-item,
+.header__mobile-hamburger-menu-site-info-item {
+  padding: 0;
+}
+
+.header__mobile-hamburger-menu-products-section,
+.header__mobile-hamburger-menu-user-info-section,
+.header__mobile-hamburger-menu-site-info-section {
+  border-top: 1px solid var(--primary-text-color);
+  border-bottom: 1px solid var(--primary-text-color);
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.header__mobile-hamburger-menu-user-info-section {
+  border-top: none;
+}
+
+.header__mobile-hamburger-menu-site-info-section {
+  border: none;
+}
+
+/* 
+============
+  ********
+    Main
+  ********
+============
+*/
+
+.main {
+  padding: 0 0 2rem 0;
+}
+
+/* 
+  Discount Section
+*/
+.main__discount {
+  background-color: #f28e91;
+}
+
+.main__discount-wrapper {
+  position: relative;
+  padding: 1rem 0;
+}
+
+.main__discount-text {
+  display: block;
+  text-align: center;
+  max-width: calc(100% - 2rem);
+}
+
+.close-icon {
+  width: 1.6rem;
+  height: 1.6rem;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.close-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* 
+  Book Info Section
+*/
+.main__book-info {
+  padding: 1rem 0;
+}
+
+.main__book-info-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.main__book-img {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 0.8rem;
+  -webkit-border-radius: 0.8rem;
+  -moz-border-radius: 0.8rem;
+  -ms-border-radius: 0.8rem;
+  -o-border-radius: 0.8rem;
+}
+
+.main__book-information-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 3rem;
+  padding: 1rem 2rem;
+  width: 54.8rem;
+  height: 30.6rem;
+  background-color: var(--search-input-information-bg-color);
+  border-radius: 0 var(--secondary-border-radius) var(--secondary-border-radius)
+    0;
+  -webkit-border-radius: 0 var(--secondary-border-radius)
+    var(--secondary-border-radius) 0;
+  -moz-border-radius: 0 var(--secondary-border-radius)
+    var(--secondary-border-radius) 0;
+  -ms-border-radius: 0 var(--secondary-border-radius)
+    var(--secondary-border-radius) 0;
+  -o-border-radius: 0 var(--secondary-border-radius)
+    var(--secondary-border-radius) 0;
+}
+
+.main__book-name {
+  font-size: 2rem;
+  font-family: "Dana-Bold";
+}
+
+.main__book-information-subtitles-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.main__book-information-author {
+  font-size: 1.4rem;
+  color: var(--secondary-text-color);
+  font-weight: 700;
+}
+
+.main__book-information-translator {
+  font-size: 1.4rem;
+  color: var(--secondary-text-color);
+  font-weight: 700;
+}
+
+.main__book-information-speaker {
+  font-size: 1.4rem;
+  color: var(--secondary-text-color);
+  font-weight: 700;
+}
+
+.main__book-information-publisher {
+  font-size: 1.4rem;
+  color: var(--secondary-text-color);
+  font-weight: 700;
+}
+
+.main__book-rate {
+  color: var(--secondary-text-color);
+  font-size: 1.8rem;
+}
+
+.main__book-info-sample {
+  width: 36rem;
+  height: 30.6rem;
+  background-color: var(--search-input-information-bg-color);
+  padding: 1rem 2rem;
+  border-radius: var(--secondary-border-radius) 0 0
+    var(--secondary-border-radius);
+  -webkit-border-radius: var(--secondary-border-radius) 0 0
+    var(--secondary-border-radius);
+  -moz-border-radius: var(--secondary-border-radius) 0 0
+    var(--secondary-border-radius);
+  -ms-border-radius: var(--secondary-border-radius) 0 0
+    var(--secondary-border-radius);
+  -o-border-radius: var(--secondary-border-radius) 0 0
+    var(--secondary-border-radius);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.main__book-price {
+  color: #fff;
+  background-color: var(--primary-color);
+  padding: 2rem;
+  text-align: center;
+  border-radius: var(--primary-border-radius);
+  -webkit-border-radius: var(--primary-border-radius);
+  -moz-border-radius: var(--primary-border-radius);
+  -ms-border-radius: var(--primary-border-radius);
+  -o-border-radius: var(--primary-border-radius);
+  font-family: "Dana-Bold";
+  cursor: pointer;
+}
+
+.main__book-sample {
+  color: var(--primary-color);
+  padding: 2rem;
+  text-align: center;
+  border: 0.1rem solid var(--primary-color);
+  border-radius: var(--primary-border-radius);
+  -webkit-border-radius: var(--primary-border-radius);
+  -moz-border-radius: var(--primary-border-radius);
+  -ms-border-radius: var(--primary-border-radius);
+  -o-border-radius: var(--primary-border-radius);
+  cursor: pointer;
+}
+
+.main__book-info-share {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.main__book-info-share-icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.main__book-info-share-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Tablet size */
+.main__tablet-book-info-wrapper {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.main__tablet-book-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.main__tablet-book-img-wrapper {
+  width: 15rem;
+  height: 15rem;
+  overflow: hidden;
+  width: calc(100% - 50rem);
+  display: flex;
+  justify-content: center;
+}
+
+.main__tablet-book-img {
+  height: 100%;
+  border-radius: var(--secondary-border-radius);
+  -webkit-border-radius: var(--secondary-border-radius);
+  -moz-border-radius: var(--secondary-border-radius);
+  -ms-border-radius: var(--secondary-border-radius);
+  -o-border-radius: var(--secondary-border-radius);
+}
+
+.main__tablet-book-information-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 23rem;
+  background-color: var(--search-input-information-bg-color);
+  padding: 1rem 2rem;
+  border-radius: var(--secondary-border-radius) var(--secondary-border-radius) 0
+    0;
+  -webkit-border-radius: var(--secondary-border-radius)
+    var(--secondary-border-radius) 0 0;
+  -moz-border-radius: var(--secondary-border-radius)
+    var(--secondary-border-radius) 0 0;
+  -ms-border-radius: var(--secondary-border-radius)
+    var(--secondary-border-radius) 0 0;
+  -o-border-radius: var(--secondary-border-radius)
+    var(--secondary-border-radius) 0 0;
+  width: 50rem;
+}
+
+.main__tablet-book-name {
+  font-size: 2rem;
+  font-family: "Dana-Bold";
+}
+
+.main__tablet-book-information-subtitles-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.main__tablet-book-information-author {
+  font-size: 1.4rem;
+  color: var(--secondary-text-color);
+}
+
+.main__tablet-book-information-translator {
+  font-size: 1.4rem;
+  color: var(--secondary-text-color);
+}
+
+.main__tablet-book-information-speaker {
+  font-size: 1.4rem;
+  color: var(--secondary-text-color);
+}
+
+.main__tablet-book-information-publisher {
+  font-size: 1.4rem;
+  color: var(--secondary-text-color);
+}
+
+.main__tablet-book-rate-and-share-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  width: calc(100% - 50rem);
+}
+
+.main__tablet-book-rate-and-share-wrapper span {
+  font-size: 1.8rem;
+  color: var(--secondary-text-color);
+  display: block;
+  text-align: center;
+}
+
+.main__tablet-book-info-share {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.main__tablet-book-info-share-icon {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.main__tablet-book-info-share-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.main__tablet-book-price-info-wrapper {
+  width: 48%;
+  background-color: var(--search-input-information-bg-color);
+  border-radius: 0 0 var(--secondary-border-radius)
+    var(--secondary-border-radius);
+  -webkit-border-radius: 0 0 var(--secondary-border-radius)
+    var(--secondary-border-radius);
+  -moz-border-radius: 0 0 var(--secondary-border-radius)
+    var(--secondary-border-radius);
+  -ms-border-radius: 0 0 var(--secondary-border-radius)
+    var(--secondary-border-radius);
+  -o-border-radius: 0 0 var(--secondary-border-radius)
+    var(--secondary-border-radius);
+  padding: 1rem 2rem;
+  width: 50rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1.4rem;
+}
+
+.main__tablet-book-price-info-download-app-btn {
+  text-align: center;
+  width: 100%;
+  color: #fff;
+  background-color: #1a304c;
+  padding: 1rem 0;
+  border-radius: var(--secondary-border-radius);
+  -webkit-border-radius: var(--secondary-border-radius);
+  -moz-border-radius: var(--secondary-border-radius);
+  -ms-border-radius: var(--secondary-border-radius);
+  -o-border-radius: var(--secondary-border-radius);
+}
+
+.main__tablet-book-price {
+  text-align: center;
+  width: 48%;
+  padding: 1rem 0;
+  color: #fff;
+  background-color: var(--primary-color);
+  border-radius: var(--primary-border-radius);
+  -webkit-border-radius: var(--primary-border-radius);
+  -moz-border-radius: var(--primary-border-radius);
+  -ms-border-radius: var(--primary-border-radius);
+  -o-border-radius: var(--primary-border-radius);
+}
+
+.main__tablet-book-sample {
+  text-align: center;
+  width: 48%;
+  padding: 1rem 0;
+  color: var(--primary-color);
+  padding: 1rem 0;
+  border: 0.1rem solid var(--primary-color);
+  border-radius: var(--primary-border-radius);
+}
+
+.main__Ebooks-commercial {
+  margin: 2rem 0;
+  padding: 1rem 0;
+  background-color: var(--search-input-information-bg-color);
+}
+
+.main__Ebooks-commercial a {
+  text-align: center;
+  color: var(--primary-color);
+}
+
+/* Book Introduce */
+.main__introduce-book {
+  padding: 2rem 0;
+}
+
+.main__introduce-book-wrapper {
+  color: var(--secondary-text-color);
+}
+
+.main__introduce-book-name,
+.main__introduce-book-description span {
+  font-size: 2rem;
+  font-family: "Dana-Bold";
+}
+
+.main__introduce-book-description {
+  line-height: 1.8;
+  text-align: justify;
+}
+
+/* Author Introduce */
+.main__introduce-author {
+  padding: 3rem 0;
+}
+
+.main__introduce-author-wrapper {
+  position: relative;
+}
+
+.main__introduce-author-title {
+  font-size: 1.8rem;
+  font-family: "Dana-Bold";
+  margin-bottom: 3rem;
+}
+
+.main__introduce-author-identity-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.main__introduce-author-identity-wrapper img {
+  width: 5.6rem;
+  height: 5.6rem;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+}
+
+.main__introduce-author-identity-nationality-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.2rem;
+}
+
+.main__introduce-author-name {
+  font-family: "Dana-Bold";
+}
+
+.main__introduce-author-nationality {
+  font-size: 1.2rem;
+  color: var(--secondary-text-color);
+}
+
+.main__introduce-author-about {
+  font-size: 1.4rem;
+  line-height: 1.8;
+  padding: 2rem 0;
+  color: #1e1e1e;
+  text-align: justify;
+}
+
+.main__introduce-author-more-about {
+  color: var(--primary-color);
+  position: absolute;
+  bottom: -1rem;
+  right: 0;
+  cursor: pointer;
+}
+
+/* Main Products */
+.main__products {
+  padding: 2rem 0;
+}
+
+.main__products-wrapper {
+  position: relative;
+}
+
+.main__products-title {
+  font-size: 1.8rem;
+  color: var(--primary-text-color);
+  padding: 1.2rem 0;
+  font-family: "Dana-Bold";
+}
+
+.main__products-section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.8rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+}
+
+.main__products-section::-webkit-scrollbar {
+  display: none;
+}
+
+.main__product {
+  background-color: #fff;
+  height: 31.4rem;
+  width: 18.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1rem 2rem;
+  border-radius: var(--secondary-border-radius);
+  -webkit-border-radius: var(--secondary-border-radius);
+  -moz-border-radius: var(--secondary-border-radius);
+  -ms-border-radius: var(--secondary-border-radius);
+  -o-border-radius: var(--secondary-border-radius);
+}
+
+.main__product-img-title {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.main__product-img-title > a {
+  display: flex;
+  justify-content: center;
+}
+
+.main__product-img-title img {
+  width: 15rem;
+  height: 15rem;
+  border-radius: var(--secondary-border-radius);
+  -webkit-border-radius: var(--secondary-border-radius);
+  -moz-border-radius: var(--secondary-border-radius);
+  -ms-border-radius: var(--secondary-border-radius);
+  -o-border-radius: var(--secondary-border-radius);
+}
+
+.main__product-img-title h3 a {
+  color: var(--primary-text-color);
+  font-family: "Dana-Bold";
+}
+
+.main__product-author-tag {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.main__product-author-tag a {
+  color: var(--secondary-text-color);
+  font-size: 1.4rem;
+}
+
+.main__product-author-tag span {
+  color: var(--secondary-text-color);
+  font-size: 1.4rem;
+  background-color: var(--tags-bg-color);
+  border-radius: var(--secondary-border-radius);
+  -webkit-border-radius: var(--secondary-border-radius);
+  -moz-border-radius: var(--secondary-border-radius);
+  -ms-border-radius: var(--secondary-border-radius);
+  -o-border-radius: var(--secondary-border-radius);
+  padding: 0.6rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main__products-right-arrow,
+.main__products-left-arrow {
+  position: absolute;
+  height: 3rem;
+  width: 3rem;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  cursor: pointer;
+  background-color: #ffffff80;
+  padding: 1rem;
+  box-sizing: content-box;
+  border-radius: var(--secondary-border-radius);
+  -webkit-border-radius: var(--secondary-border-radius);
+  -moz-border-radius: var(--secondary-border-radius);
+  -ms-border-radius: var(--secondary-border-radius);
+  -o-border-radius: var(--secondary-border-radius);
+  transition: var(--primary-transition);
+  -webkit-transition: var(--primary-transition);
+  -moz-transition: var(--primary-transition);
+  -ms-transition: var(--primary-transition);
+  -o-transition: var(--primary-transition);
+}
+
+.main__products-right-arrow:hover,
+.main__products-left-arrow:hover {
+  background-color: #ffffff;
+}
+
+.main__products-right-arrow {
+  right: 0;
+}
+
+.main__products-left-arrow {
+  left: 0;
+}
+
+.main__products-right-arrow svg,
+.main__products-left-arrow svg {
+  height: 100%;
+  width: 100%;
+}
+
+.main__products-right-arrow {
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+}
+
+/* Book Info */
+.main__complete-book-info {
+  padding: 2rem 0;
+  background-color: var(--search-input-information-bg-color);
+}
+
+.main__complete-book-info-title {
+  font-size: 2rem;
+  font-family: "Dana-Bold";
+  margin: 1.6rem 0;
+}
+
+.main__complete-book-information {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main__complete-book-size,
+.main__complete-book-time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.main__complete-book-time {
+  border-left: 0.1rem solid var(--secondary-text-color);
+  padding-left: 2rem;
+}
+
+.main__complete-book-size {
+  border-right: 0.1rem solid var(--secondary-text-color);
+  padding-right: 2rem;
+}
+
+.main__complete-book-time span,
+.main__complete-book-size span {
+  color: var(--secondary-text-color);
+  font-size: 1.4rem;
+}
+
+/* Comment section */
+.main__book-comments {
+  background-color: var(--search-input-information-bg-color);
+  padding: 3rem 0.5rem 0;
+  margin: 2rem 0;
+}
+
+.main__book-comments > .container {
+  width: 100%;
+}
+
+.main__book-comments-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main__book-comments-title {
+  font-size: 2rem;
+  font-family: "Dana-Bold";
+}
+
+.main__book-comments-link {
+  color: var(--secondary-text-color);
+}
+
+.main__book-comments {
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.main__book-comments::-webkit-scrollbar {
+  height: 1vh;
+}
+
+.main__book-comment {
+  height: 18rem;
+  min-width: 22rem;
+  padding: 0 2rem;
+  border-right: 0.1rem solid #6666663d;
+  border-left: 0.1rem solid #6666663d;
+}
+
+.main__book-comment-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main__book-comment-user-name {
+  font-size: 1.4rem;
+  font-family: "Dana-Bold";
+}
+
+.main__book-comment-date {
+  font-size: 1.2rem;
+}
+
+.main__book-comment-text {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  color: var(--secondary-text-color);
+}
+
+/* 
+==============
+  **********
+    Footer
+  **********
+==============
+*/
+.footer {
+  margin-top: 4rem;
+}
+
+.footer__top-section-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer__top-section-img-wrapper {
+  width: 18.2rem;
+  height: 12.2rem;
+}
+
+.footer__top-section-img {
+  width: 100%;
+  height: 100%;
+}
+
+.footer__top-section-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.footer__top-section-content-title {
+  font-size: 2.4rem;
+  color: var(--primary-color);
+  font-family: "Dana-Bold";
+}
+
+.footer__top-section-content-download-app-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.footer__top-section-content-download-app-link {
+  width: 15.3rem;
+  height: 4rem;
+}
+
+.footer__top-section-content-download-app-item {
+  width: 15.3rem;
+  height: 4rem;
+  color: var(--primary-color);
+  background-color: #00a2a433;
+  font-size: 4rem;
+  border-radius: 0.6rem;
+  -webkit-border-radius: 0.6rem;
+  -moz-border-radius: 0.6rem;
+  -ms-border-radius: 0.6rem;
+  -o-border-radius: 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__bottom-section-wrapper {
+  padding: 2rem 0;
+}
+
+.footer__bottom-section-imgs-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.footer__bottom-section-img {
+  width: 13.3rem;
+  height: 4.7rem;
+}
+
+.footer__bottom-section-content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.footer__bottom-section-content-item {
+  min-width: 17.7rem;
+  max-width: 17.7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.3rem;
+}
+
+.footer__bottom-section-content-item-title {
+  font-family: "Dana-Bold";
+}
+
+.footer__bottom-section-content-item-text-link {
+  color: var(--primary-text-color);
+  cursor: pointer;
+  transition: var(--primary-transition);
+  -webkit-transition: var(--primary-transition);
+  -moz-transition: var(--primary-transition);
+  -ms-transition: var(--primary-transition);
+  -o-transition: var(--primary-transition);
+}
+
+.footer__bottom-section-content-item-text-link:hover {
+  color: var(--primary-color);
+}
+
+.footer__site-copyright {
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 1.4rem;
+}
+
+.footer__site-options-wrapper {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+.footer__site-options-wrapper span,
+.footer__site-options-wrapper a {
+  color: var(--primary-color);
+  font-size: 1.4rem;
+}
+
+.footer__site-version-wrapper {
+  background-color: #666;
+}
+
+.footer__site-version {
+  font-family: Arial, Helvetica, sans-serif;
+  direction: ltr;
+  color: #fff;
+  text-align: center;
+  font-size: 1.4rem;
+  height: 8rem;
+  line-height: 4rem;
+}

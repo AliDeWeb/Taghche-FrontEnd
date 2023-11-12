@@ -1,0 +1,286 @@
+:root {
+  font-size: 62.5%;
+}
+
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1400px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+
+  .main__site-banner-top-section-content-title {
+    font-size: 2.8rem;
+  }
+
+  .main__site-banner-top-section-img-wrapper img {
+    max-width: 35.3rem;
+    max-height: 31.7rem;
+  }
+
+  .main__site-map-imgs-wrapper-item {
+    min-width: 38.4rem;
+    min-height: 21.6rem;
+    max-width: 38.4rem;
+    max-height: 21.6rem;
+  }
+
+  .main__products-commercial-img {
+    width: 38.4rem;
+    height: 21.6rem;
+  }
+
+  .main__img-products-item a {
+    min-width: 38.4rem;
+    min-height: 21.6rem;
+    max-width: 38.4rem;
+    max-height: 21.6rem;
+  }
+
+  .footer__top-section-content {
+    margin-right: 10rem;
+  }
+
+  .footer__top-section-img-wrapper {
+    width: 17.1rem;
+  }
+
+  .footer__top-section-content-download-app-wrapper {
+    flex-wrap: wrap;
+  }
+
+  .footer__top-section-content-download-app-link {
+    min-width: 40%;
+  }
+
+  .footer__top-section-content-download-app-item {
+    width: 19.2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+
+  .main__site-banner-top-section-content-text {
+    font-size: 1.8rem;
+  }
+
+  .main__site-banner-top-section-img-wrapper img {
+    max-width: 32.1rem;
+    max-height: 28.8rem;
+  }
+
+  .main__products-book-item {
+    width: 16rem;
+    height: 26rem;
+  }
+
+  .main__products-book-img {
+    width: 12rem;
+    height: 12rem;
+  }
+
+  .main__products-book-name,
+  .main__products-book-author,
+  .main__products-book-tag {
+    font-size: 1.2rem;
+  }
+
+  .footer__top-section-wrapper {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .footer__top-section-content {
+    margin-right: 0;
+  }
+
+  .footer__top-section-content-title {
+    text-align: center;
+  }
+
+  .footer__top-section-content-download-app-wrapper {
+    justify-content: center;
+  }
+
+  .footer__top-section-content-download-app-link {
+    margin: 0 auto;
+  }
+
+  .footer__top-section-content-download-app-item {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 600px;
+  }
+
+  .header__desktop {
+    display: none;
+  }
+
+  .header__mobile {
+    display: block;
+  }
+
+  .main__site-banner-top-section-content-title {
+    font-size: 2.3rem;
+    max-width: 22.2rem;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+  }
+
+  .main__site-banner-top-section-content-text {
+    font-size: 1.5rem;
+  }
+
+  .main__site-map-road-nav-icon,
+  .main__site-map-road-img-icon {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .main__products-books-arrow {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .footer__top-section-content-title {
+    font-size: 2.8rem;
+  }
+
+  .footer__top-section-content-download-app-item {
+    margin: 0 auto;
+  }
+
+  .footer__bottom-section-content-item-title,
+  .footer__bottom-section-content-item-text-link {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 590px) {
+  .container {
+    max-width: 500px;
+  }
+
+  .main__site-banner-top-section-wrapper {
+    height: 22rem;
+  }
+
+  .main__site-banner-top-section-content-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    max-width: max-content;
+    line-height: 2rem;
+  }
+
+  .main__site-banner-top-section-content-wrapper > hr {
+    margin-bottom: 1rem;
+  }
+
+  .main__site-banner-top-section-content-text {
+    font-size: 1.1rem;
+    max-width: 16.6rem;
+  }
+
+  .main__site-banner-top-section-content-link {
+    font-size: 1.1rem;
+  }
+  .main__site-banner-top-section-img-wrapper img {
+    max-width: 24.8rem;
+    max-height: 21.9rem;
+  }
+
+  .main__site-banner-bottom-section-name {
+    display: none;
+  }
+
+  .main__site-map-title {
+    font-size: 1.4rem;
+  }
+
+  .main__site-map-imgs-wrapper-item {
+    min-width: 30.8rem;
+    min-height: 17.3rem;
+    max-width: 30.8rem;
+    max-height: 17.3rem;
+  }
+
+  .main__products-title {
+    font-size: 1.4rem;
+  }
+
+  .main__products-subtitle,
+  .main__products-link {
+    font-size: 1.2rem;
+  }
+
+  .main__products-book-item {
+    height: 21.6rem;
+    width: 12.4rem;
+  }
+
+  .main__products-book-img {
+    width: 9.6rem;
+    height: 9.6rem;
+  }
+
+  .main__products-commercial-img {
+    width: 30.8rem;
+    height: 17.3rem;
+  }
+
+  .main__img-products-item a {
+    min-width: 30.8rem;
+    min-height: 17.3rem;
+    max-width: 30.8rem;
+    max-height: 17.3rem;
+  }
+
+  .footer__top-section-content-title {
+    font-size: 2.2rem;
+  }
+
+  .footer__top-section-content-download-app-item {
+    width: 14.7rem;
+    margin: 0 auto;
+  }
+
+  .footer__site-options-wrapper span,
+  .footer__site-options-wrapper a,
+  .footer__site-copyright {
+    font-size: 1rem;
+  }
+
+  .footer__site-copyright,
+  .footer__site-options-wrapper {
+    padding: 1rem 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .main__site-banner-top-section-wrapper {
+    height: max-content;
+  }
+
+  .main__site-banner-top-section-img-wrapper img {
+    max-width: 17.8rem;
+    max-height: 16.9rem;
+  }
+}

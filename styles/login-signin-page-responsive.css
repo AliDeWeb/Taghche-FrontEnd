@@ -1,0 +1,47 @@
+:root {
+  font-size: 62.5%;
+}
+
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1400px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 920px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 590px) {
+  .container {
+    max-width: 500px;
+  }
+
+  .main__welcome-text {
+    font-size: 2.2rem;
+  }
+
+  #form-input,
+  #form-submit {
+    width: 23rem;
+  }
+}

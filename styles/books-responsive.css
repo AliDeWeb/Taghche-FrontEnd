@@ -1,0 +1,279 @@
+:root {
+  font-size: 62.5%;
+}
+
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1400px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+
+  .main__book-info-wrapper {
+    justify-content: center;
+  }
+
+  .main__book-img {
+    width: 18rem;
+    height: 18rem;
+    margin-left: 2rem;
+  }
+
+  .main__book-information-wrapper {
+    width: 47.4rem;
+  }
+
+  .main__book-info-sample {
+    width: 27.4rem;
+  }
+
+  .footer__top-section-content {
+    margin-right: 10rem;
+  }
+
+  .footer__top-section-img-wrapper {
+    width: 17.1rem;
+  }
+
+  .footer__top-section-content-download-app-wrapper {
+    flex-wrap: wrap;
+  }
+
+  .footer__top-section-content-download-app-link {
+    min-width: 40%;
+  }
+
+  .footer__top-section-content-download-app-item {
+    width: 19.2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 920px;
+  }
+
+  .main__book-info-wrapper {
+    display: none;
+  }
+
+  .main__tablet-book-info-wrapper {
+    display: flex;
+  }
+
+  .main__product {
+    width: 15.2rem;
+    height: 26rem;
+  }
+
+  .main__product-img-title img {
+    width: 12rem;
+    height: 12rem;
+  }
+
+  .main__product-img-title h3 a,
+  .main__product-author-tag a,
+  .main__product-author-tag span {
+    font-size: 1.2rem;
+  }
+
+  .footer__top-section-wrapper {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .footer__top-section-content {
+    margin-right: 0;
+  }
+
+  .footer__top-section-content-title {
+    text-align: center;
+  }
+
+  .footer__top-section-content-download-app-wrapper {
+    justify-content: center;
+  }
+
+  .footer__top-section-content-download-app-link {
+    margin: 0 auto;
+  }
+
+  .footer__top-section-content-download-app-item {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 600px;
+  }
+
+  .header__desktop {
+    display: none;
+  }
+
+  .header__mobile {
+    display: block;
+  }
+
+  .main__discount-text {
+    font-size: 1.2rem;
+  }
+
+  .main__tablet-book-information-wrapper,
+  .main__tablet-book-price-info-wrapper {
+    width: 40rem;
+  }
+
+  .main__tablet-book-img-wrapper,
+  .main__tablet-book-rate-and-share-wrapper {
+    width: calc(100% - 40rem);
+  }
+
+  .main__products-right-arrow,
+  .main__products-left-arrow {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .footer__top-section-content-title {
+    font-size: 2.8rem;
+  }
+
+  .footer__top-section-content-download-app-item {
+    margin: 0 auto;
+  }
+
+  .footer__bottom-section-content-item-title,
+  .footer__bottom-section-content-item-text-link {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 590px) {
+  .container {
+    max-width: 500px;
+  }
+
+  .main__tablet-book-info {
+    gap: 1.2rem;
+  }
+
+  .main__tablet-book-img-wrapper {
+    min-width: 12rem;
+    min-height: 12rem;
+    max-width: 12rem;
+    max-height: 12rem;
+  }
+
+  .main__tablet-book-information-wrapper {
+    max-width: 30rem;
+  }
+
+  .main__tablet-book-rate-and-share-wrapper,
+  .main__tablet-book-price-info-wrapper {
+    width: 100%;
+    background-color: transparent;
+    padding: 1rem 0;
+  }
+
+  .main__tablet-book-rate-and-share-wrapper {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .main__tablet-book-name {
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+
+  .main__tablet-book-information-author,
+  .main__tablet-book-information-translator,
+  .main__tablet-book-information-speaker,
+  .main__tablet-book-information-publisher {
+    font-size: 1.2rem;
+  }
+
+  .main__tablet-book-rate-and-share-wrapper span {
+    font-size: 1.4rem;
+  }
+
+  .main__tablet-book-price-info-wrapper {
+    gap: 0.8rem;
+  }
+
+  .main__tablet-book-price-info-download-app-btn,
+  .main__tablet-book-price,
+  .main__tablet-book-sample {
+    font-size: 1.2rem;
+  }
+
+  .main__introduce-book-name,
+  .main__introduce-book-description span,
+  .main__introduce-book-description {
+    font-size: 1.4rem;
+  }
+
+  .main__product {
+    width: 12rem;
+    height: 21.6rem;
+  }
+
+  .main__product-img-title img {
+    width: 9.6rem;
+    height: 9.6rem;
+  }
+
+  .main__products-title {
+    font-size: 1.4rem;
+  }
+
+  .main__complete-book-info-title {
+    font-size: 1.4rem;
+  }
+
+  .main__complete-book-time span,
+  .main__complete-book-size span {
+    font-size: 1.2rem;
+  }
+
+  .main__book-comments-title {
+    font-size: 1.4rem;
+  }
+
+  .main__book-comments-link {
+    font-size: 1.2rem;
+  }
+
+  .footer__top-section-content-title {
+    font-size: 2.2rem;
+  }
+
+  .footer__top-section-content-download-app-item {
+    width: 14.7rem;
+    margin: 0 auto;
+  }
+
+  .footer__site-options-wrapper span,
+  .footer__site-options-wrapper a,
+  .footer__site-copyright {
+    font-size: 1rem;
+  }
+
+  .footer__site-copyright,
+  .footer__site-options-wrapper {
+    padding: 1rem 0;
+  }
+}

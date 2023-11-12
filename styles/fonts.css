@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "Dana";
+  src: url("../files/fonts/dana-regular.ttf") format("TrueType");
+}
+
+@font-face {
+  font-family: "Dana-Bold";
+  src: url("../files/fonts/dana-bold.ttf") format("TrueType");
+}

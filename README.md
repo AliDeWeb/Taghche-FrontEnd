@@ -9,6 +9,11 @@ Taghche is a responsive website developed using HTML, CSS, and JavaScript. It fo
 - **Login Page:** Provides a secure login system for existing users.
 - **Product Page:** Displays information about various products in a user-friendly manner.
 
+## View Online
+
+You can view the live version of the project by following this [link](https://alideweb.github.io/Taghche-FrontEnd/).
+
+
 ## Technologies Used
 
 - HTML

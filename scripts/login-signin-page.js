@@ -10,15 +10,18 @@ const emailRegex = /^[a-zA-Z0-9.-]+@[a-z-]+\.[a-z]{2,3}$/;
 let phoneCheckResult = null;
 let emailCheckResult = null;
 
-formInputSelector.addEventListener(`keyup`, (e) => {
+formInputSelector.addEventListener(`keyup`, () => {
   phoneCheckResult = phoneNumberRegex.test(formInputSelector.value);
   emailCheckResult = emailRegex.test(formInputSelector.value);
 
   if (phoneCheckResult || emailCheckResult) {
     formSubmitBtnSelector.style.backgroundColor = `#00a2a4`;
     formSubmitBtnSelector.style.cursor = `pointer`;
+    formSubmitBtnSelector.removeAttribute(`disabled`);
+
   } else {
     formSubmitBtnSelector.style.backgroundColor = `#9e9e9e`;
     formSubmitBtnSelector.style.cursor = `unset`;
+    formSubmitBtnSelector.setAttribute(`disabled`, ``);
   }
 });
